@@ -10,6 +10,9 @@ const app = Vue.createApp({
     addGoal() {
       this.goals.push(this.enteredGoalValue);
     },
+    removeGoal(index) {
+      this.goals.splice(index, 1);
+    },
   },
 });
 app.mount("#user-goals");
@@ -19,3 +22,4 @@ app.mount("#user-goals");
 //v-else-if
 //v-show
 //v-for
+//key and lists

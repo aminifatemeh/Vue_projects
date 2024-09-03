@@ -1,37 +1,21 @@
 const app = Vue.createApp({
   data() {
     return {
-      counter: 0,
-      name: "",
+      enteredGoalValue: "",
+      goals: [],
     };
   },
-  computed: {
-    fullName() {
-      if (this.name === "") {
-        return "";
-      }
-      return this.name + " " + "schwarzmuller";
-    },
-  },
+  computed: {},
   methods: {
-    add(number) {
-      this.counter = this.counter + number;
-    },
-    reduce(number) {
-      this.counter = this.counter - number;
-    },
-    setName(event) {
-      this.name = event.target.value;
-    },
-    resetInput() {
-      this.name = "";
-    },
-    outputFullname() {
-      if (this.name === "") {
-        return "";
-      }
-      return this.name + " " + "schwarzmuller";
+    addGoal() {
+      this.goals.push(this.enteredGoalValue);
     },
   },
 });
-app.mount("#events");
+app.mount("#user-goals");
+
+//v-if
+//v-else
+//v-else-if
+//v-show
+//v-for
